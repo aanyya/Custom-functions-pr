@@ -1,0 +1,163 @@
+; //  200. Сделайте функцию, выводящую в консоль ваше имя.
+function func() {
+	console.log('аня');
+}
+func();
+; // Сделайте функцию, выводящую в консоль сумму чисел от 1 до 100.
+function func() {
+    let res = 0;
+for (let i = 1; i <= 100; i++) {
+	res += i;
+}
+	console.log(res);
+}
+func();
+; 201. Сделайте функцию, которая параметром принимает число и выводит в консоль куб этого числа
+function func(num) {
+	console.log(num ** 3);
+}
+func(2);
+; // Сделайте функцию, которая параметром принимает число и проверяет, положительное это число или отрицательное. В первом случае пусть функция выводит в консоль текст '+++', а во втором '---'.
+function func(num) {
+    if (num > 0){
+	console.log('+++');
+    }else{
+        console.log('---');
+}
+}
+func(2);
+; // 202. Сделайте функцию, которая параметрами принимает 3 числа и выводит в консоль сумму этих чисел.
+function func(num1, num2, num3){
+    console.log(num1+num2+num3);
+}
+func(1, 2, 1)
+; // 203. Сделайте функцию func, которая параметром будет принимать 3 числа и выводить в консоль их сумму. Пусть даны 3 переменные с числами: С помощью созданной вами функции выведите в консоль сумму значений эти переменных.
+function func(num1, num2, num3) {
+	console.log(num1+num2+num3);
+}
+let param1 = 1;
+let param2 = 2;
+let param3 = 3;
+func(param1, param2, param3)
+; 204.
+function func(num1 = 0, num2 = 0) {
+	console.log(num1 + num2);
+}
+func(2, 3);
+
+function func(num1 = 0, num2 = 0) {
+	console.log(num1 + num2);
+}
+func();
+; // 205. Сделайте функцию, которая параметром принимает число, а возвращает куб этого числа. С помощью этой функции найдите куб числа 3 и запишите его в переменную res.
+function func(num){
+    return num**3;
+}
+let res=func(3);
+console.log(res)
+; // Сделайте функцию, которая параметром принимает число, а возвращает квадратный корень из этого числа. С помощью этой функции найдите корень числа 3, затем найдите корень числа 4. Просуммируйте полученные результаты и выведите их в консоль.
+function func(num) {
+    return Math.sqrt(num)
+}
+let res=func(3)+func(4)
+console.log(res)
+; // 206. Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, округляющая дробь до трех знаков в дробной части:
+; // function sqrt(num) {
+; // 	return Math.sqrt(num);
+; // }
+; // function round(num) {
+; // 	return num.toFixed(3);
+; // }
+; // С помощью этих функций найдите квадратный корень из числа 2 и округлите его до трех знаков в дробной части.
+function sqrt(num) {
+	return Math.sqrt(num);
+}
+function round(num) {
+	return num.toFixed(3);
+}
+let res=round(sqrt(2));
+console.log(res);
+; // Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, возвращающая сумму трех чисел:
+; // function sqrt(num) {
+; // 	return Math.sqrt(num);
+; // }
+; // function sum(num1, num2, num3) {
+; // 	return num1 + num2 + num3;
+; // }
+; // С помощью этих функций найдите сумму корней чисел 2, 3 и 4 и запишите ее в переменную res.
+function sqrt(num) {
+	return Math.sqrt(num);
+}
+function sum(num1, num2, num3) {
+	return num1 + num2 + num3;
+}
+let res=sum(sqrt(2), sqrt(3), sqrt(4)) ;
+console.log(res);
+; // Пусть у вас есть функция, округляющая дробь до трех знаков в дробной части:
+; // function round(num) {
+; // 	return num.toFixed(3);
+; // }
+; // С помощью этой функции модифицируйте предыдущую задачу так, чтобы в переменную res записывалась дробь, округленная до 3-х знаков в дробной части. 
+function sqrt(num) {
+	return Math.sqrt(num);
+}
+function sum(num1, num2, num3) {
+	return num1 + num2 + num3;
+}
+function round(num) {
+	return num.toFixed(3);
+}
+let res=round(sum(sqrt(2), sqrt(3), sqrt(4))) ;
+console.log(res);
+
+// function func(num) {
+//     var i=0;
+//     for (var i=0; num>10; i++) {
+//         num/=2;
+//     }
+//     return i;
+// }
+// console.log(func(50));
+
+function func(num1, num2) {	
+	if (num1 > 0 && num2 > 0) {
+		res = num1 * num2;
+	} else {
+		res = num1 - num2;
+	}
+	return res;
+}
+console.log(func(3, 4));
+
+function func(arr) {
+    for(let elem of arr) {
+        if (elem %2 !=0) {
+            return false;
+}
+    }
+    return true;
+}
+let res=func([2,4,100]);
+console.log(res);
+
+function getoddnums(num) {
+    let str=String(num);
+    for (let elem of str) {
+        if (elem % 2 !=0){
+             return console.log(true);
+}
+    }
+    return console.log(false);
+}
+getoddnums(22);
+
+function check(a) {
+    for (let i=1;i<a.length;i++) {
+        if (a[i]==a[i-1]) {
+            return true;
+        }
+    }
+    return false;
+    
+}
+console.log(check([3,1,2,4]));
